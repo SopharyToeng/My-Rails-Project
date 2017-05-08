@@ -27,6 +27,8 @@
     production:
       <<: *default
       database: <%= ENV['DATABASE_NAME'] %>
+  - detail about dotenv: https://github.com/bkeepers/dotenv
+
 3/ add haml and Simple form
   - add these in Gemfile
     . gem 'haml', '~> 4.0', '>= 4.0.7' &
@@ -34,11 +36,12 @@
   - bundle
   - rails generate simple_form:install --bootstrap
   ** simple form detail: https://github.com/plataformatec/simple_form
+
 4/ add asset gem(materialize) and drapper
   - add these in Gemfile
     . gem 'materialize-sass', '~> 0.98.0'
     . gem 'material_icons',   '~> 2.2', '>= 2.2.1'
     . gem 'draper',           github: 'audionerd/draper', branch: 'rails5'
   - bundle
-
+5/
 

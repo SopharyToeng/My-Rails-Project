@@ -19,11 +19,23 @@ gem 'haml',             '~> 4.0', '>= 4.0.7'
 gem 'simple_form',      '~> 3.4'
 gem 'materialize-sass', '~> 0.98.0'
 gem 'material_icons',   '~> 2.2', '>= 2.2.1'
+gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
 gem 'draper',           github: 'audionerd/draper', branch: 'rails5'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  gem 'byebug',             platform: :mri
+  gem 'pry',                '~> 0.10.4'
+  gem 'rspec-rails',        '~> 3.5', '>= 3.5.2'
+  gem 'ffaker',             '~> 2.5'
+  gem 'launchy',            '~> 2.4', '>= 2.4.3'
+  gem 'capybara',           '~> 2.13'
+  gem 'poltergeist',        '~> 1.14'
+  gem 'database_cleaner',   '~> 1.5', '>= 1.5.3'
+  gem 'factory_girl_rails', '~> 4.8'
+end
+
+group :test do
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
 end
 
 group :development do
