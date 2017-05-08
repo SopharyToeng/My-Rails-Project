@@ -34,6 +34,10 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.8'
 end
 
+group :production, :staging do
+  gem 'appsignal', '~> 2.1', '>= 2.1.2'
+end
+
 group :test do
   gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
 end
@@ -45,6 +49,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rubocop',               '~> 0.47.1', require: false
   gem 'brakeman',              '~> 3.5', require: false
+
+  gem 'capistrano-rails',      '~> 1.2', '>= 1.2.3'
+  gem 'capistrano-passenger',  '~> 0.2.0'
+  gem 'capistrano-rvm',        '~> 0.1.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
