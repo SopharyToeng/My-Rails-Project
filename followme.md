@@ -43,5 +43,27 @@
     . gem 'material_icons',   '~> 2.2', '>= 2.2.1'
     . gem 'draper',           github: 'audionerd/draper', branch: 'rails5'
   - bundle
-5/
+5/ add rspec and configuration
+  - add these in Gemfile
+    ##group :development, :test do
+      gem 'byebug',             platform: :mri
+      gem 'pry',                '~> 0.10.4'
+      gem 'rspec-rails',        '~> 3.5', '>= 3.5.2'
+      gem 'ffaker',             '~> 2.5'
+      gem 'launchy',            '~> 2.4', '>= 2.4.3'
+      gem 'capybara',           '~> 2.13'
+      gem 'poltergeist',        '~> 1.14'
+      gem 'database_cleaner',   '~> 1.5', '>= 1.5.3'
+      gem 'factory_girl_rails', '~> 4.8'
+    end
+  - bundle
+  - rails generate rspec:install
+  - detail about rspec: https://github.com/rspec/rspec-rails
+6. add robocop and brakeman
+  - add these in Gemfile
+    .  gem 'rubocop',               '~> 0.47.1', require: false
+    .  gem 'brakeman',              '~> 3.5', require: false
+  - Detail about robocop and brakeman
+    . https://github.com/pjkelly/robocop
+    . https://github.com/presidentbeef/brakeman
 
